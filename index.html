@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple Card</title>
+    <link rel="stylesheet" href="layouts/css/styles.css">
+</head>
+<body class="box-border p-0 m-0 mx-auto" >
+    <div class="px-8 py-3 text-xl font-semibold text-white bg-blue-400 mx-4auto sm:px-28">
+        <nav class=""><h2>Github Finder</h2></nav>
+    </div>
+    <div class="p-3 mx-8 mt-4 border-2 sm:mx-28 sm:p-5 sm:mt-8">
+        <h1 class="text-3xl font-semibold ">Search Github Users</h1>
+        <p class="my-2 text-gray-400">Enter a username to Fetch a user profile and Repos</p>
+        <input type="text" id="username" placeholder="Github Username..." class="w-full px-2 py-1 border outline-none">
+    </div>
+    <div class="p-3 mx-8 mt-4 border-2 sm:mx-28 sm:p-5 sm:mt-8 sm:grid sm:grid-cols-3 ">
+        <div class=" md:min-w-80">
+            <img src="/profile.jpg" alt="">
+            <a href="" class="flex justify-center py-1 mt-8 text-white align-middle bg-blue-500 rounded-md ">View Profile</a>
+        </div>
+        <div  class="my-4 leading-10 sm:ml-3 sm:col-start-2 sm:col-end-4">
+            <div>
+                <span class="px-3 py-2 text-white bg-blue-600 rounded-md">Public Repo:32</span>
+                <span class="px-3 py-2 text-white bg-gray-600 rounded-md">Public Gist:33</span>
+                <span class="px-3 py-2 text-white bg-green-600 rounded-md">Followers:32</span>
+                <span class="px-3 py-2 text-white rounded-md bg-violet-600">Following:32</span>
+            </div>
+            <div class="mt-4">
+                <ul class="border rounded-md ">
+                    <li class="px-3 py-1 border">Company:</li>
+                    <li class="px-3 py-1 border">Website/Blog:</li>
+                    <li class="px-3 py-1 border">Location:</li>
+                    <li class="px-3 py-1 border">Member since:</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <h1 class="mx-8 my-4 text-2xl font-semibold sm:text-4xl sm:mx-28">Latest Repos</h1>
+    <footer class="flex justify-center my-12 text-gray-500 align-middle border sm:py-2">
+        <p>Githib Finder &copy;</p>
+    </footer>
+</body>
+</html>
+<!-- npm run dev: for development -->
+<!-- npm run prod: for production -->

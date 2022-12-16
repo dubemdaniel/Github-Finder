@@ -857,10 +857,25 @@ video {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+#normal{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* #repo_span{
+  line-height: 2rem;
+} */
 
 @media (min-width: 640px) {
   .sm\:col-start-2 {
     grid-column-start: 2;
+  }
+
+  #repo_span{
+    padding: .5rem .8rem;
+  }
+  #normal{
+    padding: 0px 1.4rem 0px 0px;
   }
 
   .sm\:col-start-3 {

@@ -4,9 +4,12 @@ class UI{
     }
     
 
+    muteProfile(){
+        this.profile.innerHTML = ''
+    }
     showProfile(owner){
         this.profile.innerHTML = `
-        <div class=" sm:min-w-80 ">
+        <div class=" sm:min-w-80 " id="pro">
         <img src="${owner.avatar_url}" alt="" class="origin-center">
         <a href="${owner.html_url}" class="flex justify-center py-1 mt-8 text-white align-middle bg-blue-500 rounded-md ">View Profile</a>
     </div>
@@ -27,5 +30,49 @@ class UI{
         </div>
     </div>
         `
+    }
+
+
+
+    showRepo(repos){
+        let details = ''; 
+
+        repos.forEach(repo => {
+            details += `
+            <div class="flex justify-between my-2 align-middle border-2" id="normal" >
+            <div class="px-2 py-2"><a href="${repo.html_url}" target="_blank" >${repo.name}</a></div>
+            <div class="leading-loose ">
+                <span  class="px-1 py-1 text-white bg-blue-600 rounded-md" id="repo_span">Stars:${repo.stargazers_count}</span>
+                <span  class="px-1 py-1 text-white bg-gray-600 rounded-md" id="repo_span">Watchers:${repo.watchers_count}</span>
+                <span  class="px-1 py-1 text-white bg-green-600 rounded-md" id="repo_span">Forks:${repo.forms_count}</span>
+            </div>
+          </div>           
+            `
+        });
+
+        document.getElementById('latest_repos').innerHTML = details
+    }
+
+    showAlert(message ){
+
+        const alertDiv = document.createElement('div')
+
+        alertDiv.classList = 'p-3 mx-8 mt-4 sm:mx-28 sm:p-5 sm:mt-8 text-red-500 text-xl font-medium'
+
+        alertDiv.id = 'error'
+
+        alertDiv.appendChild(document.createTextNode(message))
+
+        const pro = document.getElementById('pro')
+
+        const main = document.getElementById('main_profile')
+
+        main.insertBefore(alertDiv, pro)
+    }
+
+
+    clearInput(){
+        this.profile.innerHTML = ''
+
     }
 }

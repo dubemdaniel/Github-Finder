@@ -23,16 +23,22 @@ username.addEventListener('keyup', function(e){
                 // console.log(data.profile)
                 if(data.profile.message === 'not found'){
                     // show error alert
-                    console.log('ur pa')
+                    ui.showAlert('User not found...')
+                    ui.muteProfile()
+                    console.log(data.profile)
+
                 }else{
                     // show prfile information
-                    
+
+                    // console.log(data)
                     ui.showProfile(data.profile)
+                    ui.showRepo(data.repo)
                 }
             })
     }else {
         // clear/remove profile
 
+        ui.clearInput()
     }
 
 })

@@ -21,16 +21,16 @@ username.addEventListener('keyup', function(e){
         github.getUser(name)
             .then (data => {
                 // console.log(data.profile)
-                if(data.profile.message === 'not found'){
+                if(data.profile.message === 'Not Found'){
                     // show error alert
                     ui.showAlert('User not found...')
-                    ui.muteProfile()
-                    console.log(data.profile)
+                    console.log('not found')
+                    ui.clearInput()
 
                 }else{
                     // show prfile information
 
-                    // console.log(data)
+                    console.log(data)
                     ui.showProfile(data.profile)
                     ui.showRepo(data.repo)
                 }

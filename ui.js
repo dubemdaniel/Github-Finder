@@ -1,15 +1,16 @@
 class UI{
     constructor(){
         this.profile = document.getElementById('main_profile')
+        this.latestRepo = document.getElementById('latest_repos')
     }
     
 
-    muteProfile(){
-        this.profile.innerHTML = ''
-    }
+    // muteProfile(){
+    //     this.profile.innerHTML = ''
+    // }
     showProfile(owner){
         this.profile.innerHTML = `
-        <div class=" sm:min-w-80 " id="pro">
+        <div class=" sm:min-w-80 " >
         <img src="${owner.avatar_url}" alt="" class="origin-center">
         <a href="${owner.html_url}" class="flex justify-center py-1 mt-8 text-white align-middle bg-blue-500 rounded-md ">View Profile</a>
     </div>
@@ -50,7 +51,7 @@ class UI{
             `
         });
 
-        document.getElementById('latest_repos').innerHTML = details
+        this.latestRepo.innerHTML = details
     }
 
     showAlert(message ){
@@ -63,16 +64,17 @@ class UI{
 
         alertDiv.appendChild(document.createTextNode(message))
 
-        const pro = document.getElementById('pro')
-
         const main = document.getElementById('main_profile')
 
-        main.insertBefore(alertDiv, pro)
+        const body = document.querySelector('body')
+
+        body.insertBefore(alertDiv, main)
     }
 
 
     clearInput(){
         this.profile.innerHTML = ''
+        this.latestRepo.innerHTML = ''
 
     }
 }

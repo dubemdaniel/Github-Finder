@@ -23,10 +23,10 @@ username.addEventListener('keyup', function(e){
                 // console.log(data.profile)
                 if(data.profile.message === 'Not Found'){
                     // show error alert
-                    ui.showAlert('User not found...')
-                    console.log('not found')
+                    // ui.showAlert('User not found...')
+                    // console.log('not found')
                     ui.clearInput()
-
+                    setTimeout(() => {ui.showAlert('User not found...'), 3000})
                 }else{
                     // show prfile information
 

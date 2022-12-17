@@ -710,9 +710,27 @@ video {
   outline-offset: 2px;
 }
 
+#error{
+  padding: .8rem 1rem;
+  margin: 1rem 2rem 1rem 2rem;
+  color: white;
+  background-color: rgb(252, 92, 92);
+  font-size: larger;
+  font-weight: 600;
+}
+
 @media (min-width: 640px) {
   .sm\:col-start-2 {
     grid-column-start: 2;
+  }
+
+  #error{
+    padding: .8rem 1rem;
+    margin: 1.4rem 6rem 1rem 6rem;
+    color: white;
+    background-color: rgb(252, 92, 92);
+    font-size: x-large;
+    font-weight: 600;
   }
 
   .sm\:col-end-4 {

@@ -54,7 +54,7 @@ class UI{
         this.latestRepo.innerHTML = details
     }
 
-    showAlert(message ){
+    showAlert(message){
 
         const alertDiv = document.createElement('div')
 

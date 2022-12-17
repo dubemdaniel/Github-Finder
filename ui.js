@@ -55,6 +55,7 @@ class UI{
     }
 
     showAlert(message){
+        this.clearAlert()
 
         const alertDiv = document.createElement('div')
 
@@ -69,6 +70,10 @@ class UI{
         const body = document.querySelector('body')
 
         body.insertBefore(alertDiv, main)
+
+        setTimeout(() => {
+            this.clearAlert()
+        }, 3000)
     }
 
 
@@ -76,5 +81,13 @@ class UI{
         this.profile.innerHTML = ''
         this.latestRepo.innerHTML = ''
 
+    }
+
+    clearAlert(){
+        const alert = document.getElementById('error');
+
+        if(alert){
+            alert.remove();
+        }
     }
 }

@@ -24,12 +24,12 @@ username.addEventListener('keyup', function(e){
                 if(data.profile.message === 'Not Found'){
                     // show error alert
                     ui.showAlert('User not found...')
-                    // console.log('not found')
+
                     ui.clearInput()
                 }else{
                     // show prfile information
 
-                    console.log(data)
+                    // console.log(data)
                     ui.showProfile(data.profile)
                     ui.showRepo(data.repo)
                 }

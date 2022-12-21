@@ -40,8 +40,8 @@ class UI{
 
         repos.forEach(repo => {
             details += `
-            <div class="flex justify-between my-2 align-middle border-2" id="normal" >
-            <div class="px-2 py-2"><a href="${repo.html_url}" target="_blank" >${repo.name}</a></div>
+            <div class="px-2 flex justify-between my-2 align-middle border-2 py-4 flex-wrap" id="normal" >
+            <div class=" py-2"><a href="${repo.html_url}" target="_blank" >${repo.name}</a></div>
             <div class="leading-loose ">
                 <span  class="px-1 py-1 text-white bg-blue-600 rounded-md" id="repo_span">Stars:${repo.stargazers_count}</span>
                 <span  class="px-1 py-1 text-white bg-gray-600 rounded-md" id="repo_span">Watchers:${repo.watchers_count}</span>
@@ -91,3 +91,8 @@ class UI{
         }
     }
 }
+
+// overflow-x: scroll;
+// flex-wrap: wrap;
+// align-items: center;
+// /* justify-content: center; */
